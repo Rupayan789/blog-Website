@@ -1,0 +1,8 @@
+<%- include('partials/header'); -%>
+<h1 class="hometitle">Home</h1>
+<p><%= homestartContent %></p>
+<% publishList.forEach(function(single){ %>
+<h1><%= single.title %></h1>
+<p><%= single.body.substring(0,100)+"..." %><a href="/posts/<%=single.title %>">Read More </a></p>
+<% }); %>
+<%- include('partials/footer'); -%>
